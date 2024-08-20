@@ -28,6 +28,11 @@ Simply navigate through the folders to find the topic you're interested in. Each
 
 Contributions are welcome! If you have an example or solution you'd like to share, feel free to submit a pull request.
 
+## Website Credit and author
+
+https://www.sql-practice.com/
+I am not owner of the website above. Credit goes to the author!
+
 ---
 
 Happy querying! 🚀
