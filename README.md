@@ -31,6 +31,7 @@ Contributions are welcome! If you have an example or solution you'd like to shar
 ## Website Credit and author
 
 https://www.sql-practice.com/
+
 I am not owner of the website above. Credit goes to the author!
 
 ---
