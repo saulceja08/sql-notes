@@ -26,7 +26,26 @@ WHERE allergies IS null;
 
 **Query:**
 ```sql
-select first_name 
+SELECT first_name 
 FROM patients
-where first_name like 'C%';
+WHERE first_name like 'C%';
+``` 
+
+### 4. **Show first name and last name of patients that weight within the range of 100 to 120 (inclusive)**
+
+**Query:**
+```sql
+SELECT first_name, last_name
+FROM patients
+WHERE weight between 100 AND 120;
+``` 
+
+### 5. **Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'**
+
+**Query:**
+```sql
+UPDATE patients
+
+SET allergies = 'NKA'
+WHERE allergies is null;
 ``` 
