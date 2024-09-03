@@ -4,7 +4,7 @@ Welcome to my SQL Cheat Sheet repository! 🎉
 
 ## About
 
-This project is a comprehensive cheat sheet for SQL, aimed at providing quick references and examples to help you work more efficiently with SQL. Whether you're a beginner looking to learn the basics or an experienced user needing a refresher, you'll find useful content here.
+These notes function as a comprehensive cheat sheet for SQL, aimed at providing quick references and examples to help you work more efficiently with SQL. Whether you're a beginner looking to learn the basics or an experienced user needing a refresher, you'll find useful content here.
 
 ## Features
 
