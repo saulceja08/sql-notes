@@ -49,3 +49,11 @@ UPDATE patients
 SET allergies = 'NKA'
 WHERE allergies is null;
 ``` 
+
+### 6. **Show first name and last name concatinated into one column to show their full name.**
+
+**Query:**
+```sql
+SELECT CONCAT(first_name, " ", last_name) 
+FROM patients;
+``` 
