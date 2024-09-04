@@ -117,7 +117,7 @@ WHERE admission_date = discharge_date;
 ```sql
 SELECT patient_id, count(*) AS total_admissions
 FROM admissions
-WHERE patient_id = 579;;
+WHERE patient_id = 579;
 ``` 
 
 ### 14. ****
