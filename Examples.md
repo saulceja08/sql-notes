@@ -4,7 +4,7 @@ This page provides practical examples of common SQL queries, with questions and 
 
 ## 🔍 Basic Queries
 
-### 1. **Show first name, last name, and gender of patients whose gender is 'M'**
+### 1. **Show first name, last name, and gender of patients whose gender is 'M'.**
 
 **Query:**
 ```sql
@@ -13,7 +13,7 @@ FROM patients
 WHERE gender = 'M';
 ```
 
-### 2. **Show first name and last name of patients who does not have allergies. (null)**
+### 2. **Show first name and last name of patients who does not have allergies (null).**
 
 **Query:**
 ```sql
@@ -22,7 +22,7 @@ FROM patients
 WHERE allergies IS null;
 ```
 
-### 3. **Show first name of patients that start with the letter 'C'**
+### 3. **Show first name of patients that start with the letter 'C'.**
 
 **Query:**
 ```sql
@@ -31,7 +31,7 @@ FROM patients
 WHERE first_name like 'C%';
 ``` 
 
-### 4. **Show first name and last name of patients that weight within the range of 100 to 120 (inclusive)**
+### 4. **Show first name and last name of patients that weight within the range of 100 to 120 (inclusive).**
 
 **Query:**
 ```sql
@@ -40,7 +40,7 @@ FROM patients
 WHERE weight between 100 AND 120;
 ``` 
 
-### 5. **Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'**
+### 5. **Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'.**
 
 **Query:**
 ```sql
@@ -58,7 +58,7 @@ SELECT CONCAT(first_name, " ", last_name)
 FROM patients;
 ``` 
 
-### 7. **Show first name, last name, and the full province name of each patient. Example: 'Ontario' instead of 'ON'**
+### 7. **Show first name, last name, and the full province name of each patient. Example: 'Ontario' instead of 'ON'.**
 
 **Query:**
 ```sql
@@ -86,7 +86,7 @@ FROM patients
 WHERE height = (SELECT MAX(height) FROM patients);
 ``` 
 
-### 10. **Show all columns for patients who have one of the following patient_ids: 1,45,534,879,1000**
+### 10. **Show all columns for patients who have one of the following patient_ids: 1,45,534,879,1000.**
 
 **Query:**
 ```sql
@@ -94,7 +94,7 @@ SELECT * FROM patients
 WHERE patient_id IN (1,45,534,879,1000);
 ``` 
 
-### 11. **Show the total number of admissions**
+### 11. **Show the total number of admissions.**
 
 **Query:**
 ```sql
@@ -129,7 +129,7 @@ FROM patients
 WHERE province_id = 'NS';
 ``` 
 
-### 15. **Show first name and last name of patients that weight within the range of 100 to 120 (inclusive)**
+### 15. **Show first name and last name of patients that weight within the range of 100 to 120 (inclusive).**
 
 **Query:**
 ```sql
@@ -138,7 +138,7 @@ FROM patients
 WHERE weight BETWEEN 100 and 120;
 ``` 
 
-### 16. **Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'**
+### 16. **Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'.**
 
 **Query:**
 ```sql
@@ -155,7 +155,7 @@ SELECT CONCAT(first_name, " ", last_name) AS full_name
 FROM patients;
 ``` 
 
-### 18. **Show first name, last name, and the full province name of each patient. Example: 'Ontario' instead of 'ON'**
+### 18. **Show first name, last name, and the full province name of each patient. Example: 'Ontario' instead of 'ON'.**
 
 **Query:**
 ```sql
@@ -219,35 +219,35 @@ LIMIT 1;
 ;
 ``` 
 
-### 25. ****
+### 26. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 25. ****
+### 27. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 25. ****
+### 28. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 25. ****
+### 29. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 25. ****
+### 30. ****
 
 **Query:**
 ```sql
