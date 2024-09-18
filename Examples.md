@@ -120,25 +120,31 @@ FROM admissions
 WHERE patient_id = 579;
 ``` 
 
-### 14. ****
+### 14. **Based on the cities that our patients live in, show unique cities that are in province_id 'NS'?**
 
 **Query:**
 ```sql
-;
+SELECT DISTINCT(city)
+FROM patients
+WHERE province_id = 'NS';
 ``` 
 
-### 15. ****
+### 15. **Show first name and last name of patients that weight within the range of 100 to 120 (inclusive)**
 
 **Query:**
 ```sql
-;
+SELECT first_name, last_name
+FROM patients
+WHERE weight BETWEEN 100 and 120;
 ``` 
 
-### 16. ****
+### 16. **Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'**
 
 **Query:**
 ```sql
-;
+UPDATE patients
+SET allergies = 'NKA'
+WHERE allergies IS NULL;
 ``` 
 
 ### 17. ****
