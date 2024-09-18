@@ -147,28 +147,72 @@ SET allergies = 'NKA'
 WHERE allergies IS NULL;
 ``` 
 
-### 17. ****
+### 17. **Show first name and last name concatinated into one column to show their full name.**
+
+**Query:**
+```sql
+SELECT CONCAT(first_name, " ", last_name) AS full_name
+FROM patients;
+``` 
+
+### 18. **Show first name, last name, and the full province name of each patient. Example: 'Ontario' instead of 'ON'**
+
+**Query:**
+```sql
+SELECT first_name, last_name, pn.province_name
+FROM patients pt
+LEFT JOIN province_names pn
+ON pt.province_id = pn.province_id;
+``` 
+
+### 19. **Show how many patients have a birth_date with 2010 as the birth year.**
+
+**Query:**
+```sql
+SELECT COUNT(*) AS '2010_birthdays'
+FROM patients
+WHERE YEAR(birth_date) = 2010;
+``` 
+
+### 20. **Show the first_name, last_name, and height of the patient with the greatest height.**
+
+**Query:**
+```sql
+SELECT first_name, last_name, height
+FROM patients
+ORDER BY height DESC
+LIMIT 1;
+``` 
+
+### 21. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 18. ****
+### 22. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 19. ****
+### 23. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 20. ****
+### 24. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 25. ****
 
 **Query:**
 ```sql
