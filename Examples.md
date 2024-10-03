@@ -133,14 +133,19 @@ WHERE province_id = 'NS';
 
 **Query:**
 ```sql
-;
+SELECT first_name, last_name, birth_date
+FROM patients
+WHERE height > 160 AND weight > 70;
 ``` 
 
-### 16. ****
+### 16. **Write a query to find list of patients first_name, last_name, and allergies where allergies are not null and are from the city of 'Hamilton'**
 
 **Query:**
 ```sql
-;
+SELECT first_name, last_name, allergies
+FROM patients
+WHERE allergies not null
+and city = 'Hamilton';
 ``` 
 
 ### 17. ****
