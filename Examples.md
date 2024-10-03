@@ -148,18 +148,23 @@ WHERE allergies not null
 and city = 'Hamilton';
 ``` 
 
-### 17. ****
+### 17. **Show unique birth years from patients and order them by ascending.**
 
 **Query:**
 ```sql
-;
+SELECT DISTINCT YEAR(birth_date) AS birth_year
+FROM patients
+ORDER BY birth_year ASC;
 ``` 
 
-### 18. ****
+### 18. **Show unique first names from the patients table which only occurs once in the list.**
 
 **Query:**
 ```sql
-;
+SELECT first_name 
+FROM patients
+GROUP BY first_name
+HAVING COUNT(first_name) = 1;
 ``` 
 
 ### 19. **S**
