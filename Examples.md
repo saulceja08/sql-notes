@@ -201,7 +201,10 @@ ORDER BY LEN(first_name), first_name;
 
 **Query:**
 ```sql
-;
+Select
+	Sum(CASE WHEN gender='M' THEN 1 ELSE 0 END) as "male_patients",
+	Sum(CASE WHEN gender='F' THEN 1 ELSE 0 end) as "female_patients"
+from patients;
 ``` 
 
 ### 23. ****
@@ -225,35 +228,35 @@ ORDER BY LEN(first_name), first_name;
 ;
 ``` 
 
-### 25. ****
+### 26. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 25. ****
+### 27. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 25. ****
+### 28. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 25. ****
+### 29. ****
 
 **Query:**
 ```sql
 ;
 ``` 
 
-### 25. ****
+### 30. ****
 
 **Query:**
 ```sql
