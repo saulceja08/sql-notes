@@ -167,25 +167,34 @@ GROUP BY first_name
 HAVING COUNT(first_name) = 1;
 ``` 
 
-### 19. **S**
+### 19. **Show patient_id and first_name from patients where their first_name start and ends with 's' and is at least 6 characters long.**
 
 **Query:**
 ```sql
-;
+SELECT patient_id, first_name
+FROM patients
+WHERE first_name LIKE 's%s'
+AND LEN(first_name) >= 6;
 ``` 
 
-### 20. ****
+### 20. **Show patient_id, first_name, last_name from patients whos diagnosis is 'Dementia'.**
 
 **Query:**
 ```sql
-;
+SELECT p.patient_id, p.first_name, p.last_name
+FROM patients p
+LEFT JOIN admissions a
+On p.patient_id = a.patient_id
+Where a.diagnosis = 'Dementia';
 ``` 
 
-### 21. ****
+### 21. **Display every patient's first_name. Order the list by the length of each name and then by alphabetically.**
 
 **Query:**
 ```sql
-;
+SELECT first_name
+FROM patients
+ORDER BY LEN(first_name), first_name;
 ``` 
 
 ### 22. ****
