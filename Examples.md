@@ -318,12 +318,7 @@ ORDER BY admission_date DESC
 LIMIT 1;
 ``` 
 
-### 34. 
-**Show `patient_id`, `attending_doctor_id`, and `diagnosis` for admissions that match one of the two criteria:**
-
-1. `patient_id` is an odd number and `attending_doctor_id` is either 1, 5, or 19.
-2. `attending_doctor_id` contains a 2 and the length of `patient_id` is 3 characters.
-
+### 34. **Show patient_id, attending_doctor_id, and diagnosis for admissions that match one of the two criteria: 1. patient_id is an odd number and attending_doctor_id is either 1, 5, or 19. 2. attending_doctor_id contains a 2 and the length of patient_id is 3 characters.**
 
 **Query:**
 ```sql
