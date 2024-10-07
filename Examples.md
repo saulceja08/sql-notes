@@ -197,28 +197,34 @@ FROM patients
 ORDER BY LEN(first_name), first_name;
 ``` 
 
-### 22. ****
+### 22. **Show the total amount of male patients and the total amount of female patients in the patients table. Display the two results in the same row.**
 
 **Query:**
 ```sql
-Select
-	Sum(CASE WHEN gender='M' THEN 1 ELSE 0 END) as "male_patients",
-	Sum(CASE WHEN gender='F' THEN 1 ELSE 0 end) as "female_patients"
-from patients;
+SELECT
+	Sum(CASE WHEN gender='M' THEN 1 ELSE 0 END) AS "male_patients",
+	Sum(CASE WHEN gender='F' THEN 1 ELSE 0 end) AS "female_patients"
+FROM patients;
 ``` 
 
-### 23. ****
+### 23. **Show first and last name, allergies from patients which have allergies to either 'Penicillin' or 'Morphine'. Show results ordered ascending by allergies then by first_name then by last_name.**
 
 **Query:**
 ```sql
-;
+SELECT first_name, last_name, allergies
+FROM patients
+WHERE allergies = "Penicillin" OR allergies = "Morphine"
+ORDER BY allergies ASC, first_name, last_name;
 ``` 
 
-### 24. ****
+### 24. **Show patient_id, diagnosis from admissions. Find patients admitted multiple times for the same diagnosis.**
 
 **Query:**
 ```sql
-;
+SELECT patient_id, diagnosis
+FROM admissions
+Group BY patient_id,diagnosis
+HAVING count(*) > 1;
 ``` 
 
 ### 25. ****
