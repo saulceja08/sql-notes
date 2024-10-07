@@ -295,7 +295,6 @@ HAVING sum(height) >= 7000;
 SELECT MAX(weight) - MIN(weight) AS weight_difference
 FROM patients
 WHERE last_name = 'Maroni';
-;
 ``` 
 
 ### 32. **Show all of the days of the month (1-31) and how many admission_dates occurred on that day. Sort by the day with most admissions to least admissions.**
@@ -308,14 +307,23 @@ GROUP BY day(admission_date)
 ORDER BY total_admissions DESC;
 ``` 
 
-### 33. ****
+### 33. **Show all columns for patient_id 542's most recent admission_date.**
 
 **Query:**
 ```sql
-;
+SELECT * 
+FROM admissions
+WHERE patient_id = 542
+ORDER BY admission_date DESC
+LIMIT 1;
 ``` 
 
-### 34. ****
+### 34. 
+**Show `patient_id`, `attending_doctor_id`, and `diagnosis` for admissions that match one of the two criteria:**
+
+1. `patient_id` is an odd number and `attending_doctor_id` is either 1, 5, or 19.
+2. `attending_doctor_id` contains a 2 and the length of `patient_id` is 3 characters.
+
 
 **Query:**
 ```sql
