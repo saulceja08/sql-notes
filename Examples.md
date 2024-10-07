@@ -227,18 +227,25 @@ Group BY patient_id,diagnosis
 HAVING count(*) > 1;
 ``` 
 
-### 25. ****
+### 25. **Show the city and the total number of patients in the city. Order from most to least patients and then by city name ascending.**
 
 **Query:**
 ```sql
-;
+SELECT city, COUNT(*) AS num_patients
+FROM patients
+GROUP BY city
+ORDER BY num_patients DESC, city asc;;
 ``` 
 
-### 26. ****
+### 26. **Show first name, last name and role of every person that is either patient or doctor. The roles are either "Patient" or "Doctor"**
 
 **Query:**
 ```sql
-;
+SELECT first_name,last_name, "Doctor" AS role
+FROM doctors
+UNION ALL
+SELECT first_name, last_name, "Patient" AS role
+FROM patients;
 ``` 
 
 ### 27. ****
