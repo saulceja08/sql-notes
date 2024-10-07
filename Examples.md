@@ -248,11 +248,15 @@ SELECT first_name, last_name, "Patient" AS role
 FROM patients;
 ``` 
 
-### 27. ****
+### 27. **Show all allergies ordered by popularity. Remove NULL values from query.**
 
 **Query:**
 ```sql
-;
+SELECT allergies, COUNT(*) AS total_diagnosis
+FROM patients
+WHERE allergies IS NOT NULL
+GROUP BY allergies
+ORDER BY total_diagnosis DESC;
 ``` 
 
 ### 28. ****
@@ -270,6 +274,41 @@ FROM patients;
 ``` 
 
 ### 30. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 31. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 32. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 33. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 34. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 35. ****
 
 **Query:**
 ```sql
