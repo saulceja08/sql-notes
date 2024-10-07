@@ -322,10 +322,61 @@ LIMIT 1;
 
 **Query:**
 ```sql
-;
+SELECT patient_id, attending_doctor_id, diagnosis
+FROM admissions
+WHERE 
+(patient_id % 2 = 1 AND attending_doctor_id IN (1,5,19))
+OR 
+(attending_doctor_id LIKE "%2%" AND LEN(patient_id) = 3);
 ``` 
 
 ### 35. ****
+
+**Query:**
+```sql
+SELECT d.first_name, d.last_name, COUNT(*) AS admissions_total
+FROM admissions a
+JOIN doctors d
+ON a.attending_doctor_id = d.doctor_id
+GROUP BY a.attending_doctor_id;
+``` 
+
+### 36. **For each doctor, display their id, full name, and the first and last admission date they attended.**
+
+**Query:**
+```sql
+SELECT 
+	doctor_id, 
+	first_name || ' ' || last_name AS full_name, 
+	MIN(admission_date) AS first_admission_date, 
+	MAX(admission_date) AS last_admission_date
+FROM admissions a
+JOIN doctors ph ON a.attending_doctor_id = ph.doctor_id
+GROUP BY doctor_id;;
+``` 
+
+### 37. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 38. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 39. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 40. ****
 
 **Query:**
 ```sql
