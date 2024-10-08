@@ -367,18 +367,29 @@ GROUP BY pv.province_id
 ORDER BY patient_count DESC;
 ``` 
 
-### 38. ****
+### 38. **For every admission, display the patient's full name, their admission diagnosis, and their doctor's full name who diagnosed their problem.**
 
 **Query:**
 ```sql
-;
+SELECT
+  CONCAT(patients.first_name, ' ', patients.last_name) AS patient_name,
+  diagnosis,
+  CONCAT(doctors.first_name,' ',doctors.last_name) AS doctor_name
+FROM patients
+  JOIN admissions ON admissions.patient_id = patients.patient_id
+  JOIN doctors ON doctors.doctor_id = admissions.attending_doctor_id;;
 ``` 
 
-### 39. ****
+### 39. **display the first name, last name and number of duplicate patients based on their first name and last name. Ex: A patient with an identical name can be considered a duplicate.**
 
 **Query:**
 ```sql
-;
+SELECT first_name, last_name, count(*) AS num_of_duplicates
+FROM patients
+GROUP BY
+  first_name,
+  last_name
+HAVING COUNT(*) > 1;
 ``` 
 
 ### 40. ****
