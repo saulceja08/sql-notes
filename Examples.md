@@ -396,5 +396,87 @@ HAVING COUNT(*) > 1;
 
 **Query:**
 ```sql
+SELECT
+    CONCAT(first_name, ' ', last_name) AS 'patient_name', 
+    ROUND(height / 30.48, 1) AS 'height "Feet"', 
+    ROUND(weight * 2.205, 0) AS 'weight "Pounds"', birth_date,
+CASE
+	WHEN gender = 'M' THEN 'MALE' 
+  	ELSE 'FEMALE' 
+	END AS 'gender_type'
+FROM patients;
+``` 
+
+### 41. ****
+
+**Query:**
+```sql
+SELECT p.patient_id, p.first_name, p.last_name
+FROM patients p
+LEFT JOIN admissions a
+ON p.patient_id = a.patient_id
+WHERE a.patient_id IS NULL;
+``` 
+
+### 42. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 43. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 44. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 45. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 46. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 47. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 48. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 49. ****
+
+**Query:**
+```sql
+;
+``` 
+
+### 50. ****
+
+**Query:**
+```sql
 ;
 ``` 
