@@ -401,8 +401,7 @@ SELECT
     ROUND(height / 30.48, 1) AS 'height "Feet"', 
     ROUND(weight * 2.205, 0) AS 'weight "Pounds"', birth_date,
 CASE
-	WHEN gender = 'M' THEN 'MALE' 
-  	ELSE 'FEMALE' 
+	WHEN gender = 'M' THEN 'MALE' ELSE 'FEMALE' 
 	END AS 'gender_type'
 FROM patients;
 ``` 
