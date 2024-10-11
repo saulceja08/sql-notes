@@ -1,6 +1,7 @@
 # SQL Query Examples 📊
 
 This page provides practical examples of common SQL queries, with questions and their corresponding solutions.
+Note: Reference the Database Schema Diagram 
 
 ## 🔍 Basic Queries
 
