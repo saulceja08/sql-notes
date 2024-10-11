@@ -1,9 +1,9 @@
 # SQL Query Examples 📊
 
 This page provides practical examples of common SQL queries, with questions and their corresponding solutions.
-Note: Reference the Database Schema Diagram 
+Note: Reference the Database Schema Diagram. Multiple solutions accepted
 
-## 🔍 Basic Queries
+## 🔍 Basic Query solutions
 
 ### 1. **Show first name, last name, and gender of patients whose gender is 'M'**
 
