@@ -479,3 +479,10 @@ WHERE a.patient_id IS NULL;
 ```sql
 ;
 ``` 
+
+### 51. ****
+
+**Query:**
+```sql
+;
+``` 
